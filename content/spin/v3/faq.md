@@ -30,6 +30,7 @@ Most applications will not require changes. The following changes may affect app
 * Some modules produced by languages with older WASI support may no longer run. This specifically affects WAGI applications
   compiled with a WASI-SDK version 18 or earlier. See https://github.com/fermyon/spin/issues/2552 for details
   of the issue and for possible workarounds.
+* Spin now has been updated to support inferencing models in the more populat safetensors format instead of GGML format. Spin now only support the Llama architecture for inferencing - this  is a breaing change as earlier there was support for gpt2, gptj, bloom, mpt and falcon. The folder structure for the inferencing models has been updated as well - now the structure is of the format `.spin/ai-models/<model arch>/<model name>/<model files>`. Support for well-known models has also been dropped. 
 
 The following change will not affect most application authors, but may affect you if you work directly with the low-level WASI interfaces:
 
